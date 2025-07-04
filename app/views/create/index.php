@@ -12,6 +12,7 @@
     <div class="col-sm-auto">
         <form action="/create/verify" method="post" >
         <fieldset>
+            <div class="w-50 mx-auto">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input required type="text" class="form-control" name="username">
@@ -24,7 +25,9 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input required type="password" class="form-control" name="confirm-password">
             </div>
+            </div>
             <br>
+            <p class="text-danger w-60 text-center small mx-auto">Note: The password should be a mix of uppercase and lowercase letters and must be more than 10 letters.</p>
             <div class="d-flex justify-content-center align-items-center gap-3">
                 <button type="submit" class="btn btn-primary d-block">Sign Up</button>
                 <a href="/login">Already have an account?</a>
