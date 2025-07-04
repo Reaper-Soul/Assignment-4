@@ -19,9 +19,9 @@
 			</div>
 			<div class="form-group">
 				<label for="password">Password</label>
-				<input required type="password" class="form-control" name="password">
+				<input required id="password" type="password" class="form-control" name="password">
+				 <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password<br><br>
 			</div>
-            <br>
 		    <div class="d-flex justify-content-center align-items-center gap-3">
 					<button type="submit" class="btn btn-primary d-block">Login</button>
 					<a href="/create">New User?</a>
@@ -33,6 +33,13 @@
 </div>	
 <?php require_once 'app/views/templates/footer.php' ?>
 
+<script>
+	function togglePassword() {
+			const passwordField = document.getElementById("password");
+			passwordField.type = passwordField.type === "password" ? "text" : "password";
+	}
+</script>
+	
 <style>
 		main.container-center {
 				display: flex;
